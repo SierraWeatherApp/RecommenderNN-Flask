@@ -13,4 +13,4 @@ x_test = x_test.astype('float32')
 # Create and train the umbrella model with a custom optimizer and learning rate
 umbrella_model = create_and_train_model(x_train,y_train_umbrella,(11,),umbrella_data.shape[1], 'sgd', learning_rate=0.01)
 
-umbrella_model.save('trained/umbrella-m.h5')
+#umbrella_model.save('trained/umbrella-m.h5')

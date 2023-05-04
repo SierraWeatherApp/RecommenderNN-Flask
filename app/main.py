@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import numpy as np
 import trainedModels
 
@@ -11,12 +11,10 @@ def hello_world():
 
 
 @app.route('/rec')
-def test():
-    params = request.args.getlist('inputs', type=float) #Import params
-    params = np.array(params).reshape(1, -1)     #Reshape data to fit model
+def request_rec():
+    params = request.args.getlist('inputs', type=float)
+    params = np.array(params).reshape(1, -1)
     response = trainedModels.getRecommended(params)
-    #if len(params) != 11:
-    #    return "Not 11 args", 400
 
     return response, 200
 

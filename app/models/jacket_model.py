@@ -13,4 +13,4 @@ x_test = x_test.astype('float32')
 # Create and train the jacket model with a custom optimizer and learning rate
 jacket_model = create_and_train_model(x_train,y_train_jacket,(11,),jacket_data.shape[1], 'rmsprop', 0.001)
 
-jacket_model.save('trained/jacket-m.h5')
+#jacket_model.save('trained/jacket-m.h5')

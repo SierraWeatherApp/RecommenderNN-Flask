@@ -13,4 +13,4 @@ x_test = x_test.astype('float32')
 # Create and train the shoes model with a custom optimizer and learning rate
 shoes_model = create_and_train_model(x_train,y_train_shoes,(11,),shoes_data.shape[1], 'adam', 0.001)
 
-shoes_model.save('trained/shoes-m.h5')
+#shoes_model.save('trained/shoes-m.h5')

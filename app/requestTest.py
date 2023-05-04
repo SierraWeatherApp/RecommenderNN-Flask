@@ -1,5 +1,4 @@
 import requests
-import numpy as np
 
 # Define the base URL of your Flask API
 base_url = 'http://localhost:5000'
@@ -19,6 +18,6 @@ if response.status_code == 200:
 else:
     # The request failed
     # Handle the error
-    data = "rq failed"
+    data = "request failed"
 
 print(data)

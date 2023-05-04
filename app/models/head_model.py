@@ -13,4 +13,4 @@ x_test = x_test.astype('float32')
 # Create and train the head model with a custom optimizer and learning rate
 head_model = create_and_train_model(x_train, y_train_head,(11,), head_data.shape[1], 'sgd', 0.01)
 
-head_model.save('trained/head-m.h5')
+#head_model.save('trained/head-m.h5')

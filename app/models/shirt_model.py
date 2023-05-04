@@ -13,4 +13,4 @@ x_test = x_test.astype('float32')
 # Create and train the shirt model with a custom optimizer and learning rate
 shirt_model = create_and_train_model(x_train,y_train_shirt,(11,),shirt_data.shape[1], 'sgd', 0.01)
 
-shirt_model.save('trained/shirt-m.h5')
+#shirt_model.save('trained/shirt-m.h5')
