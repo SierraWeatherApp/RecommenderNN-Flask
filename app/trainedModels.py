@@ -8,15 +8,14 @@ pants_labels = ['pants_pants', 'pants_shorts', 'pants_snow-pants']
 shoes_labels = ['shoes_boots', 'shoes_rain-boots', 'shoes_sandals', 'shoes_sneakers']
 umbrella_labels = ['umbrella_False', 'umbrella_True']
 
-
 def getRecommended(params):
     # Load the saved model
-    head_model = load_model('trained/head-m.h5')
-    shirt_model = load_model('trained/shirt-m.h5')
-    jacket_model = load_model('trained/jacket-m.h5')
-    pants_model = load_model('trained/pants-m.h5')
-    shoes_model = load_model('trained/shoes-m.h5')
-    umbrella_model = load_model('trained/umbrella-m.h5')
+    head_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/head-m.h5')
+    shirt_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/shirt-m.h5')
+    jacket_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/jacket-m.h5')
+    pants_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/pants-m.h5')
+    shoes_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/shoes-m.h5')
+    umbrella_model = load_model('/Users/viktorsalomonsson/KTH/GitHub/RecommenderNN-Flask/app/trained/umbrella-m.h5')
     # Generate predictions
 
     raw_head = np.argmax(head_model.predict(params), axis=-1).tolist()

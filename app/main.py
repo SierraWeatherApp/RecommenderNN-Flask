@@ -12,12 +12,16 @@ def hello_world():
 
 @app.route('/rec')
 def request_rec():
-    params = request.args.getlist('inputs', type=float)
-    params = np.array(params).reshape(1, -1)
-    response = trainedModels.getRecommended(params)
-
-    return response, 200
+    try:
+        params = request.args.getlist('inputs', type=float)
+        if len(params) != 11:
+            return 'Invalid input data: expected 11 inputs', 400
+        params = np.array(params).reshape(1, -1)
+        response = trainedModels.getRecommended(params)
+        return response, 200
+    except ValueError:
+        return 'Invalid input data: inputs must be numbers', 400
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='130.229.168.180', port=4444)

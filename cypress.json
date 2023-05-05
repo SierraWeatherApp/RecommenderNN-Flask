@@ -1,5 +1,5 @@
 {
   "env": {
-    "apiUrl": "http://host.docker.internal:5000"
+    "apiUrl": "http://130.229.168.180:4444"
   }
 }
