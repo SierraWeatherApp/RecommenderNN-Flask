@@ -2,7 +2,7 @@
   "name": "backend-boilerplate-fastapi",
   "version": "1.0.0",
   "scripts": {
-    "build": "pip3 install -r requirements.txt",
+    "build": "pip3 install -r app/requirements.txt",
     "start": "cd app && gunicorn main:app",
     "test": "cypress run"
   },
