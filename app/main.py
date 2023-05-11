@@ -24,4 +24,4 @@ def request_rec():
 
 
 if __name__ == '__main__':
-    app.run(host='130.229.168.180', port=4444)
+    app.run()
