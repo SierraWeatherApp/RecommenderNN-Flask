@@ -1,5 +1,5 @@
 {
   "env": {
-    "apiUrl": "http://130.229.168.180:4444"
+    "apiUrl": "http://localhost:8000"
   }
 }

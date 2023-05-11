@@ -1,6 +1,7 @@
 from flask import Flask, request
 import numpy as np
 import trainedModels
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
 
@@ -24,4 +25,4 @@ def request_rec():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.wsgi_app = ProxyFix(app.wsgi_app)
